@@ -1,0 +1,30 @@
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        k = set(nums)
+        for i in k:
+            if nums.count(i)>len(nums)/2:
+                return i
+ -----------------------------------------------------------------------
+ class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        c = 0
+        k = 0
+        for i in range(len(nums)):
+            m = 0
+            n = nums[i]
+            for j in range(len(nums)):
+                if nums[i]==nums[j]:
+                    m = m + 1
+            if (c<m):
+                c = m
+                k = nums[i]
+        return k
+            
