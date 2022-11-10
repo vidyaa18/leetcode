@@ -1,0 +1,10 @@
+class Solution(object):
+    def singleNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        k = list(set(nums))
+        for i in range(len(k)):
+            if nums.count(k[i])==1:
+                return k[i]
