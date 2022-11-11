@@ -1,0 +1,13 @@
+class Solution(object):
+    def addDigits(self, num):
+        """
+        :type num: int
+        :rtype: int
+        """
+        s = num
+        while(len(str(s))!=1):
+            n = list(map(int,str(s)))
+            k = sum(n)
+            s = k
+
+        return s
